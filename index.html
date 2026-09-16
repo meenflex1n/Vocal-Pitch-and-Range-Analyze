@@ -84,7 +84,7 @@
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
- 
+
     <!-- Header / Navigation -->
     <header class="bg-theme-card border-b border-theme-border sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +99,7 @@
                         <p class="text-xs text-theme-muted">ระบบวิเคราะห์ช่วงเสียงและคีย์เพลง</p>
                     </div>
                 </div>
- 
+
                 <!-- Navigation Tabs -->
                 <nav class="flex space-x-1 sm:space-x-2">
                     <button onclick="switchTab('range-test')" id="tab-range-test" class="tab-btn active px-3 py-2 rounded-t-md text-xs sm:text-sm font-medium transition-colors duration-150 flex items-center space-x-2">
@@ -122,10 +122,10 @@
             </div>
         </div>
     </header>
- 
+
     <!-- Main Content Area -->
     <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
- 
+
         <!-- ==================== TAB 1: VOCAL RANGE TEST ==================== -->
         <section id="section-range-test" class="space-y-6">
             <!-- Progress Bar -->
@@ -138,10 +138,10 @@
                     <div id="step-progress-bar" class="bg-theme-accent h-full transition-all duration-300" style="width: 25%"></div>
                 </div>
             </div>
- 
+
             <!-- Step Containers -->
             <div class="bg-theme-card border border-theme-border rounded-xl p-6 relative">
- 
+
                 <!-- STEP 1: MIC CALIBRATION -->
                 <div id="range-step-1" class="space-y-6">
                     <div class="text-center max-w-md mx-auto space-y-3">
@@ -153,7 +153,7 @@
                             ระบบจะเปิดใช้งานไมโครโฟนพร้อมปิดระบบบีบอัดเสียงของเบราว์เซอร์ เพื่อให้สามารถประมวลผลความถี่ได้อย่างเสถียรและแม่นยำที่สุด
                         </p>
                     </div>
- 
+
                     <div class="flex justify-center">
                         <button onclick="startMicCalibration()" class="px-6 py-2.5 bg-theme-accent hover:bg-theme-accentDark text-slate-950 font-medium rounded-lg text-sm transition-all duration-150 flex items-center space-x-2">
                             <i class="fa-solid fa-power-off"></i>
@@ -161,7 +161,7 @@
                         </button>
                     </div>
                 </div>
- 
+
                 <!-- STEP 2: LOWEST NOTE TEST -->
                 <div id="range-step-2" class="hidden space-y-6">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-theme-border pb-4 gap-4">
@@ -174,7 +174,7 @@
                             <span>ฟังเสียงตัวอย่าง (C3)</span>
                         </button>
                     </div>
- 
+
                     <!-- Tuner Display -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
                         <div class="bg-theme-bg border border-theme-border rounded-xl p-6 text-center">
@@ -182,7 +182,7 @@
                             <div id="step2-current-note" class="text-4xl font-mono font-bold text-theme-accent">--</div>
                             <span id="step2-current-hz" class="text-xs text-theme-muted font-mono mt-1 block">0.0 Hz</span>
                         </div>
- 
+
                         <!-- Hold Progress Ring / Timer -->
                         <div class="flex flex-col items-center justify-center space-y-2">
                             <div class="relative w-28 h-28 flex items-center justify-center">
@@ -193,7 +193,7 @@
                                 <span id="step2-hold-status" class="absolute text-xs font-semibold text-theme-muted">ลากเสียงยาว</span>
                             </div>
                         </div>
- 
+
                         <!-- Captured Lowest Note -->
                         <div class="bg-theme-bg border border-theme-border rounded-xl p-6 text-center">
                             <span class="text-xs text-theme-muted block mb-1">โน้ตต่ำสุดที่บันทึกได้</span>
@@ -201,7 +201,7 @@
                             <span id="step2-lowest-hz" class="text-xs text-theme-muted font-mono mt-1 block">ยังไม่ได้บันทึก</span>
                         </div>
                     </div>
- 
+
                     <div class="flex justify-between items-center pt-4 border-t border-theme-border">
                         <button onclick="resetStep(2)" class="px-4 py-2 text-xs font-medium text-theme-muted hover:text-theme-text transition-colors">
                             <i class="fa-solid fa-rotate-right mr-1"></i> ลองใหม่
@@ -211,7 +211,7 @@
                         </button>
                     </div>
                 </div>
- 
+
                 <!-- STEP 3: HIGHEST NOTE TEST -->
                 <div id="range-step-3" class="hidden space-y-6">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-theme-border pb-4 gap-4">
@@ -224,7 +224,7 @@
                             <span>ฟังเสียงตัวอย่าง (A4)</span>
                         </button>
                     </div>
- 
+
                     <!-- Tuner Display -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
                         <div class="bg-theme-bg border border-theme-border rounded-xl p-6 text-center">
@@ -232,7 +232,7 @@
                             <div id="step3-current-note" class="text-4xl font-mono font-bold text-theme-accent">--</div>
                             <span id="step3-current-hz" class="text-xs text-theme-muted font-mono mt-1 block">0.0 Hz</span>
                         </div>
- 
+
                         <!-- Hold Progress Ring / Timer -->
                         <div class="flex flex-col items-center justify-center space-y-2">
                             <div class="relative w-28 h-28 flex items-center justify-center">
@@ -243,7 +243,7 @@
                                 <span id="step3-hold-status" class="absolute text-xs font-semibold text-theme-muted">ลากเสียงยาว</span>
                             </div>
                         </div>
- 
+
                         <!-- Captured Highest Note -->
                         <div class="bg-theme-bg border border-theme-border rounded-xl p-6 text-center">
                             <span class="text-xs text-theme-muted block mb-1">โน้ตสูงสุดที่บันทึกได้</span>
@@ -251,7 +251,7 @@
                             <span id="step3-highest-hz" class="text-xs text-theme-muted font-mono mt-1 block">ยังไม่ได้บันทึก</span>
                         </div>
                     </div>
- 
+
                     <div class="flex justify-between items-center pt-4 border-t border-theme-border">
                         <button onclick="goToStep(2)" class="px-4 py-2 text-xs font-medium text-theme-muted hover:text-theme-text transition-colors">
                             <i class="fa-solid fa-arrow-left mr-1"></i> ย้อนกลับ
@@ -261,7 +261,7 @@
                         </button>
                     </div>
                 </div>
- 
+
                 <!-- STEP 4: RESULTS DASHBOARD -->
                 <div id="range-step-4" class="hidden space-y-8">
                     <!-- Voice Classification Header -->
@@ -277,7 +277,7 @@
                             ประเภทเสียงร้องชายสูง มีความโดดเด่นในย่านเสียงกลางถึงสูง เหมาะสำหรับการร้องเพลงป๊อป ร็อก หรืออาร์แอนด์บี
                         </p>
                     </div>
- 
+
                     <!-- Standard Voice Comparison Grid -->
                     <div class="space-y-3">
                         <h3 class="text-sm font-semibold text-theme-text flex items-center space-x-2">
@@ -288,40 +288,40 @@
                             <!-- Spectrum bars populated dynamically via JS -->
                         </div>
                     </div>
- 
+
                     <!-- Thai Artists Matching Section -->
                     <div class="space-y-4">
                         <h3 class="text-sm font-semibold text-theme-text flex items-center space-x-2">
                             <i class="fa-solid fa-user-group text-theme-accent"></i>
-                            <span>นักร้องไทยที่มีช่วงเสียงใกล้เคียงกับคุณ</span>
+                            <span>ศิลปินที่มีช่วงเสียงใกล้เคียงกับคุณ</span>
                         </h3>
                         <div id="artist-recommend-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <!-- Populated dynamically via JS -->
                         </div>
                     </div>
- 
-                    <!-- Thai Song Recommendations (Tunebat Style) -->
+
+                    <!-- Song Recommendations (Tunebat Style) -->
                     <div class="space-y-4">
                         <h3 class="text-sm font-semibold text-theme-text flex items-center space-x-2">
                             <i class="fa-solid fa-compact-disc text-theme-accent"></i>
-                            <span>เพลงไทยที่แนะนำสำหรับฝึกร้อง</span>
+                            <span>เพลงที่แนะนำสำหรับฝึกร้อง (เรียงระดับจากง่ายไปยาก)</span>
                         </h3>
                         <div id="song-recommend-list" class="space-y-3">
                             <!-- Populated dynamically via JS -->
                         </div>
                     </div>
- 
+
                     <div class="text-center pt-4">
                         <button onclick="restartRangeTest()" class="px-6 py-2.5 bg-theme-bg border border-theme-border hover:bg-theme-border text-theme-text rounded-lg text-xs font-medium transition-colors">
                             <i class="fa-solid fa-rotate-left mr-2"></i> ทดสอบช่วงเสียงใหม่อีกครั้ง
                         </button>
                     </div>
                 </div>
- 
+
             </div>
         </section>
- 
- 
+
+
         <!-- ==================== TAB 2: KEY FINDER ==================== -->
         <section id="section-key-finder" class="hidden space-y-6">
             <div class="bg-theme-card border border-theme-border rounded-xl p-6">
@@ -340,7 +340,7 @@
                         </button>
                     </div>
                 </div>
- 
+
                 <!-- Live Tuner & Pitch Meter Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <!-- Current Note Card -->
@@ -349,7 +349,7 @@
                         <div id="key-live-note" class="text-5xl font-mono font-bold text-theme-accent my-2">--</div>
                         <span id="key-live-hz" class="text-xs text-theme-muted font-mono block">0.0 Hz</span>
                     </div>
- 
+
                     <!-- Tuner Needle Display -->
                     <div class="bg-theme-bg border border-theme-border rounded-xl p-5 flex flex-col justify-center items-center">
                         <span class="text-xs text-theme-muted mb-2">ความแม่นยำโน้ต (Cent Offset)</span>
@@ -363,7 +363,7 @@
                             <span>+50c (Sharp)</span>
                         </div>
                     </div>
- 
+
                     <!-- Estimated Key Result -->
                     <div class="bg-theme-bg border border-theme-border rounded-xl p-5 text-center flex flex-col justify-center items-center">
                         <span class="text-xs text-theme-muted block mb-1">สเกล / คีย์เพลงที่คำนวณได้</span>
@@ -371,7 +371,7 @@
                         <span id="key-confidence-text" class="text-xs text-theme-muted">สะสมข้อมูลโน้ตอย่างน้อย 10 ครั้ง</span>
                     </div>
                 </div>
- 
+
                 <!-- Frequency Histogram of Sung Notes -->
                 <div class="space-y-3">
                     <h3 class="text-xs font-semibold text-theme-text uppercase tracking-wider">สถิติความถี่โน้ตที่พบในเพลง (Note Occurrence Histogram)</h3>
@@ -381,8 +381,8 @@
                 </div>
             </div>
         </section>
- 
- 
+
+
         <!-- ==================== TAB 3: VIRTUAL PIANO ==================== -->
         <section id="section-piano" class="hidden space-y-6">
             <div class="bg-theme-card border border-theme-border rounded-xl p-6">
@@ -401,7 +401,7 @@
                         </select>
                     </div>
                 </div>
- 
+
                 <!-- Scrollable Keyboard Wrapper -->
                 <div class="overflow-x-auto pb-4">
                     <div id="piano-keyboard-container" class="flex min-w-[800px] h-44 select-none justify-center relative">
@@ -410,8 +410,8 @@
                 </div>
             </div>
         </section>
- 
- 
+
+
         <!-- ==================== TAB 4: PROJECT INFO ==================== -->
         <section id="section-project-info" class="hidden space-y-6">
             <div class="bg-theme-card border border-theme-border rounded-xl p-6 space-y-6">
@@ -420,7 +420,7 @@
                     <h2 class="text-xl font-bold text-theme-text mt-1">Vocal Pitch and Range Analyzer</h2>
                     <p class="text-xs text-theme-muted mt-1">เว็บแอปพลิเคชันวิเคราะห์โน้ตและช่วงเสียงสำหรับผู้ฝึกร้องเพลง</p>
                 </div>
- 
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-3">
                         <h3 class="text-sm font-semibold text-theme-text flex items-center space-x-2">
@@ -430,10 +430,10 @@
                         <ul class="text-xs text-theme-muted space-y-2 list-disc list-inside leading-relaxed">
                             <li>เพื่อวิเคราะห์ความถี่เสียงและโน้ตดนตรีสากลผ่านเว็บเบราว์เซอร์ได้แบบ Real-Time</li>
                             <li>เพื่อทดสอบหาช่วงเสียงร้อง (Vocal Range) และประเมินประเภทเสียงของผู้ใช้งาน</li>
-                            <li>เพื่อแนะนำเพลงไทยและนักร้องที่มีช่วงเสียงเหมาะสมกับผู้ใช้งาน ป้องกันการเกิดอาการบาดเจ็บของเส้นเสียง</li>
+                            <li>เพื่อแนะนำเพลงและศิลปินที่มีช่วงเสียงเหมาะสมกับผู้ใช้งาน ป้องกันการเกิดอาการบาดเจ็บของเส้นเสียง</li>
                         </ul>
                     </div>
- 
+
                     <div class="space-y-3">
                         <h3 class="text-sm font-semibold text-theme-text flex items-center space-x-2">
                             <i class="fa-solid fa-microchip text-theme-accent"></i>
@@ -446,7 +446,7 @@
                         </ul>
                     </div>
                 </div>
- 
+
                 <!-- Gantt Chart Timeline -->
                 <div class="space-y-3 pt-4 border-t border-theme-border">
                     <h3 class="text-sm font-semibold text-theme-text flex items-center space-x-2">
@@ -477,7 +477,7 @@
                                     <td class="p-3 text-center">-</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-3 text-theme-text">3. ออกแบบและพัฒนา UI โหมดวัดช่วงเสียง และระบบแนะนำเพลงไทย</td>
+                                    <td class="p-3 text-theme-text">3. ออกแบบและพัฒนา UI โหมดวัดช่วงเสียง และระบบแนะนำเพลง</td>
                                     <td class="p-3 text-center">-</td>
                                     <td class="p-3 text-center"><span class="inline-block w-full bg-theme-accent/20 text-theme-accent rounded py-1">ดำเนินการ</span></td>
                                     <td class="p-3 text-center">-</td>
@@ -492,21 +492,21 @@
                         </table>
                     </div>
                 </div>
- 
+
             </div>
         </section>
- 
+
     </main>
- 
+
     <!-- Footer -->
     <footer class="bg-theme-card border-t border-theme-border py-4 text-center text-xs text-theme-muted">
         <p>Vocal Pitch and Range Analyzer &copy; 2026 | โครงงานคอมพิวเตอร์เพื่อการศึกษา</p>
     </footer>
- 
+
     <!-- JAVASCRIPT LOGIC -->
     <script>
         // ==========================================
-        // CONSTANTS & MUSICAL DATA (THAI TARGET)
+        // CONSTANTS & MUSICAL DATA (UPDATED)
         // ==========================================
         const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
         
@@ -518,40 +518,38 @@
             { type: "Alto", nameTH: "อัลโต / เมซโซ-สอปราโน (Alto)", minHz: 174.61, maxHz: 698.46, minNote: "F3", maxNote: "F5", desc: "เสียงหญิงต่ำ มีความทุ้ม นุ่มนวล และมีเสน่ห์" },
             { type: "Soprano", nameTH: "สอปราโน (Soprano)", minHz: 261.63, maxHz: 1046.50, minNote: "C4", maxNote: "C6", desc: "เสียงหญิงสูง มีความกังวานและสามารถพุ่งขึ้นโน้ตสูงได้ดีเยี่ยม" }
         ];
- 
-        // Thai Artists Database
+
+        // Thai & International Artists Database (Rock/Metal & Diverse Focus)
         const THAI_ARTISTS = [
-            { name: "NONT TANONT", voiceType: "Tenor", range: "A2 - Bb4", desc: "เสียงเทเนอร์นุ่มนวล คุมลมและเทคนิค Head Voice ได้เนียนกริบ", tag: "Pop / R&B" },
-            { name: "Bodyslam (พี่ตูน)", voiceType: "Tenor", range: "B2 - A4", desc: "เสียงเทเนอร์ทรงพลัง สไตล์ร็อก มีพลังการพุ่งของเสียงสูง", tag: "Rock" },
-            { name: "Three Man Down (กิต)", voiceType: "Tenor", range: "C3 - B4", desc: "เสียงสูงสดใส สไตล์ Modern Pop-Rock", tag: "Pop Rock" },
-            { name: "BOWKYLION", voiceType: "Alto", range: "F3 - E5", desc: "เสียงอัลโตร่วมสมัย มีเอกลักษณ์ในย่านเสียงกลางและความนุ่ม", tag: "Indie Pop" },
-            { name: "Ink Waruntorn", voiceType: "Soprano", range: "A3 - F5", desc: "เสียงสอปราโนสดใส ไบรต์ ฟังสบายสไตล์ Synth-Pop", tag: "Synth Pop" },
-            { name: "Jeff Satur", voiceType: "Tenor", range: "G2 - C5", desc: "ช่วงเสียงกว้างพิเศษ เทคนิค Falsetto และพลังเสียงสูงโดดเด่น", tag: "Pop / R&B" }
+            { name: "Bodyslam (พี่ตูน)", voiceType: "Tenor", range: "B2 - B4", desc: "เสียงเทเนอร์ทรงพลัง สไตล์ร็อก มีพลังการพุ่งของเสียงเต็ม (Belting) ที่แข็งแรงมาก", tag: "Rock" },
             { name: "Silly Fools (พี่โต)", voiceType: "Tenor", range: "B2 - D5", desc: "ตำนานร็อกไทย ช่วงเสียงกว้างมาก โดดเด่นเรื่องการใช้ Mixed Voice และ Head Voice พุ่งๆ", tag: "Rock / Metal" },
             { name: "Retrospect (แน็ป)", voiceType: "Tenor", range: "A2 - C5", desc: "สายว้ากและคลีน เสียงมีความสากและดุดัน ต้องใช้ความแข็งแรงของเส้นเสียงสูง", tag: "Metalcore" },
             { name: "Lomosonic (บอย)", voiceType: "Tenor", range: "C3 - C5", desc: "เอนเนอร์จี้ล้นเหลือ โน้ตสูงปรี๊ด เสียงมีเอกลักษณ์ในการดึงอารมณ์เพลงร็อก", tag: "Rock" },
             { name: "ONE OK ROCK (Taka)", voiceType: "Tenor", range: "F2 - C5", desc: "ศิลปินสากลสายร็อก เสียงพุ่ง คมชัด ทักษะการคุมลมและ Mixed Voice ระดับโลก", tag: "Alt Rock" },
-            { name: "Potato (ปั๊บ)", voiceType: "Baritone / Tenor", range: "G2 - A4", desc: "เสียงนุ่มแต่มีพลัง ร้องเพลงป๊อปร็อกได้เข้าถึงอารมณ์ คุมเสียงย่านกลางได้ดีเยี่ยม", tag: "Pop Rock" }
+            { name: "Potato (ปั๊บ)", voiceType: "Tenor", range: "G2 - A4", desc: "เสียงนุ่มแต่มีพลัง ร้องเพลงป๊อปร็อกได้เข้าถึงอารมณ์ คุมเสียงย่านกลางได้ดีเยี่ยม", tag: "Pop Rock" },
+            { name: "BOWKYLION", voiceType: "Alto", range: "F3 - E5", desc: "เสียงอัลโตร่วมสมัย มีเอกลักษณ์ในย่านเสียงกลางและความนุ่ม", tag: "Indie Pop" },
+            { name: "Ink Waruntorn", voiceType: "Soprano", range: "A3 - F5", desc: "เสียงสอปราโนสดใส ไบรต์ ฟังสบายสไตล์ Synth-Pop", tag: "Synth Pop" }
         ];
- 
-        // Thai Songs Recommendation Database
+
+        // Song Recommendation Database (Sorted: Easy to Hard)
         const THAI_SONGS = [
-            { title: "พิง", artist: "NONT TANONT", key: "C Major", rangeNote: "C3 - G4", difficulty: "ปานกลาง", voiceType: "Tenor" },
-            { title: "ถ้าเราเจอกันอีก", artist: " Tilly Birds", key: "F# Major", rangeNote: "C#3 - A#4", difficulty: "ค่อนข้างสูง", voiceType: "Tenor" },
-            { title: "หวังดีเสนอหน้า", artist: "Three Man Down", key: "A Major", rangeNote: "E3 - A4", difficulty: "ปานกลาง", voiceType: "Tenor" },
-            { title: "วาดวิมาน", artist: "BOWKYLION", key: "E Major", rangeNote: "G#3 - C#5", difficulty: "ปานกลาง", voiceType: "Alto" },
-            { title: "สายตาหลอกกันไม่ได้", artist: "Ink Waruntorn", key: "Eb Major", rangeNote: "Bb3 - Eb5", difficulty: "ง่าย - ปานกลาง", voiceType: "Soprano" },
-            { title: "แสงสุดท้าย", artist: "Bodyslam", key: "D Major", rangeNote: "D3 - A4", difficulty: "ยาก (ใช้พลังเสียง)", voiceType: "Tenor" }
-            { title: "ทิ้งไว้กลางทาง", artist: "Potato", key: "G Major", rangeNote: "D3 - G4", difficulty: "1 - ง่าย", voiceType: "Baritone/Tenor" },
+            // Level 1: ง่าย
+            { title: "ทิ้งไว้กลางทาง", artist: "Potato", key: "G Major", rangeNote: "D3 - G4", difficulty: "1 - ง่าย", voiceType: "Tenor" },
+            { title: "สายตาหลอกกันไม่ได้", artist: "Ink Waruntorn", key: "Eb Major", rangeNote: "Bb3 - Eb5", difficulty: "1 - ง่าย", voiceType: "Soprano" },
+            // Level 2: ง่ายถึงปานกลาง
             { title: "คุกเข่า", artist: "COCKTAIL", key: "F# Minor", rangeNote: "C#3 - A4", difficulty: "2 - ง่ายถึงปานกลาง", voiceType: "Tenor" },
+            { title: "วาดวิมาน", artist: "BOWKYLION", key: "E Major", rangeNote: "G#3 - C#5", difficulty: "2 - ง่ายถึงปานกลาง", voiceType: "Alto" },
+            // Level 3: ปานกลาง
             { title: "จันทร์เจ้า", artist: "Slot Machine", key: "B Minor", rangeNote: "B2 - B4", difficulty: "3 - ปานกลาง", voiceType: "Tenor" },
-        { title: "ความเชื่อ", artist: "Bodyslam", key: "E Major", rangeNote: "B2 - G#4", difficulty: "3 - ปานกลาง", voiceType: "Tenor" },
-        { title: "Wherever You Are", artist: "ONE OK ROCK", key: "E Major", rangeNote: "B2 - A4", difficulty: "4 - ค่อนข้างยาก", voiceType: "Tenor" },
-        { title: "แสงสุดท้าย", artist: "Bodyslam", key: "D Major", rangeNote: "D3 - A4", difficulty: "4 - ค่อนข้างยาก", voiceType: "Tenor" },
-        { title: "ยาพิษ", artist: "Bodyslam", key: "C# Minor", rangeNote: "C#3 - B4", difficulty: "5 - ยากมาก (ใช้พลังเยอะ)", voiceType: "Tenor" },
-        { title: "วัดใจ", artist: "Silly Fools", key: "F# Minor", rangeNote: "F#3 - C5", difficulty: "5 - ยากมาก (ทดสอบ Mixed Voice)", voiceType: "Tenor" }
+            { title: "ความเชื่อ", artist: "Bodyslam", key: "E Major", rangeNote: "B2 - G#4", difficulty: "3 - ปานกลาง", voiceType: "Tenor" },
+            // Level 4: ค่อนข้างยาก
+            { title: "Wherever You Are", artist: "ONE OK ROCK", key: "E Major", rangeNote: "B2 - A4", difficulty: "4 - ค่อนข้างยาก", voiceType: "Tenor" },
+            { title: "แสงสุดท้าย", artist: "Bodyslam", key: "D Major", rangeNote: "D3 - A4", difficulty: "4 - ค่อนข้างยาก", voiceType: "Tenor" },
+            // Level 5: ยากมาก
+            { title: "ยาพิษ", artist: "Bodyslam", key: "C# Minor", rangeNote: "C#3 - B4", difficulty: "5 - ยากมาก (ใช้พลังเยอะ)", voiceType: "Tenor" },
+            { title: "วัดใจ", artist: "Silly Fools", key: "F# Minor", rangeNote: "F#3 - C5", difficulty: "5 - ยากมาก (ทดสอบ Mixed Voice)", voiceType: "Tenor" }
         ];
- 
+
         // ==========================================
         // GLOBAL STATE
         // ==========================================
@@ -559,22 +557,20 @@
         let micStream = null;
         let analyserNode = null;
         let isMicActive = false;
- 
+
         // Range Test State
         let currentStep = 1;
         let lowestNoteData = null; // { note, hz }
         let highestNoteData = null; // { note, hz }
         let holdTimer = null;
         let holdStartTime = null;
-        let lastGoodDetectionTime = null; // last time a valid pitch was detected during a hold
         const HOLD_DURATION = 1500; // 1.5 seconds stable note hold
-        const SILENCE_GRACE_MS = 300; // tolerate brief dropouts (breath dips, vibrato glitches) without resetting the hold
- 
+
         // Key Finder State
         let isKeyFinderRunning = false;
         let keyNoteCounts = new Array(12).fill(0);
         let totalKeyNotesCaptured = 0;
- 
+
         // ==========================================
         // INITIALIZATION
         // ==========================================
@@ -582,7 +578,7 @@
             renderPianoKeys();
             renderKeyHistogram();
         });
- 
+
         function switchTab(tabId) {
             // Update Tab Buttons
             document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -591,19 +587,19 @@
             });
             const activeBtn = document.getElementById(`tab-${tabId}`);
             if (activeBtn) activeBtn.classList.add('active');
- 
+
             // Hide all sections
             ['range-test', 'key-finder', 'piano', 'project-info'].forEach(id => {
                 document.getElementById(`section-${id}`).classList.add('hidden');
             });
             document.getElementById(`section-${tabId}`).classList.remove('hidden');
- 
+
             // Stop Key Finder mic loop if switched away
             if (tabId !== 'key-finder' && isKeyFinderRunning) {
                 toggleKeyFinderMic();
             }
         }
- 
+
         // ==========================================
         // AUDIO CONTEXT & DSP PITCH DETECTION (YIN)
         // ==========================================
@@ -615,7 +611,7 @@
                 await audioCtx.resume();
             }
         }
- 
+
         async function getMicrophoneStream() {
             await initAudioContext();
             if (!micStream) {
@@ -630,13 +626,13 @@
             }
             return micStream;
         }
- 
+
         // YIN Algorithm Implementation for Accurate Fundamental Frequency
         function YINPitchDetection(buffer, sampleRate) {
             const bufferSize = buffer.length;
             const halfBufferSize = Math.floor(bufferSize / 2);
             const yinBuffer = new Float32Array(halfBufferSize);
- 
+
             // Step 1: Difference Function
             for (let t = 0; t < halfBufferSize; t++) {
                 yinBuffer[t] = 0;
@@ -647,7 +643,7 @@
                     yinBuffer[t] += delta * delta;
                 }
             }
- 
+
             // Step 2: Cumulative Mean Normalized Difference
             yinBuffer[0] = 1;
             let runningSum = 0;
@@ -655,7 +651,7 @@
                 runningSum += yinBuffer[t];
                 yinBuffer[t] = (yinBuffer[t] * t) / runningSum;
             }
- 
+
             // Step 3: Absolute Thresholding
             const threshold = 0.15;
             let tau = -1;
@@ -668,11 +664,11 @@
                     break;
                 }
             }
- 
+
             if (tau === -1 || yinBuffer[tau] >= threshold) {
                 return -1; // No clear pitch detected
             }
- 
+
             // Step 4: Parabolic Interpolation for exact frequency
             let betterTau;
             const x0 = tau < 1 ? tau : tau - 1;
@@ -689,10 +685,10 @@
                 const s2 = yinBuffer[x2];
                 betterTau = tau + (s2 - s0) / (2 * (2 * s1 - s2 - s0));
             }
- 
+
             return sampleRate / betterTau;
         }
- 
+
         // Helper: Convert Frequency Hz to Note Info
         function hzToNote(freq) {
             if (freq <= 0) return null;
@@ -702,7 +698,7 @@
             const octave = Math.floor(roundedNote / 12) - 1;
             const noteName = NOTE_NAMES[noteIndex] + octave;
             const cents = Math.round((noteNum - roundedNote) * 100);
- 
+
             return {
                 name: noteName,
                 pitchClass: NOTE_NAMES[noteIndex],
@@ -711,7 +707,7 @@
                 cents: cents
             };
         }
- 
+
         // ==========================================
         // TAB 1: VOCAL RANGE TEST LOGIC
         // ==========================================
@@ -722,77 +718,70 @@
                 analyserNode.fftSize = 2048;
                 const source = audioCtx.createMediaStreamSource(stream);
                 source.connect(analyserNode);
- 
+
                 isMicActive = true;
                 goToStep(2);
             } catch (err) {
                 alert("ไม่สามารถเข้าถึงไมโครโฟนได้ กรุณาอนุญาตการใช้งานไมโครโฟนในเบราว์เซอร์");
             }
         }
- 
+
         function goToStep(step) {
             currentStep = step;
             // Update Header & Progress
             document.getElementById('step-indicator').innerText = `สเต็ป ${step} จาก 4`;
             document.getElementById('step-progress-bar').style.width = `${step * 25}%`;
- 
+
             const titles = ["ตั้งค่าไมโครโฟน", "หาเสียงต่ำสุด", "หาเสียงสูงสุด", "สรุปผล"];
             document.getElementById('step-title').innerText = titles[step - 1];
- 
+
             // Toggle Step Panels
             for (let i = 1; i <= 4; i++) {
                 document.getElementById(`range-step-${i}`).classList.add('hidden');
             }
             document.getElementById(`range-step-${step}`).classList.remove('hidden');
- 
-            // Reset hold tracking whenever we (re)enter a step, so a stale timer doesn't carry over
-            holdStartTime = null;
-            lastGoodDetectionTime = null;
- 
+
             // Trigger Pitch Loops for Step 2 or 3
             if (step === 2 || step === 3) {
                 runRangeTestLoop(step);
             }
         }
- 
+
         function runRangeTestLoop(step) {
             if (!isMicActive || currentStep !== step) return;
- 
+
             const buffer = new Float32Array(analyserNode.fftSize);
             analyserNode.getFloatTimeDomainData(buffer);
- 
+
             // Calculate Volume RMS
             let sumSq = 0;
             for (let i = 0; i < buffer.length; i++) sumSq += buffer[i] * buffer[i];
             const rms = Math.sqrt(sumSq / buffer.length);
- 
+
             const pitchHz = (rms > 0.02) ? YINPitchDetection(buffer, audioCtx.sampleRate) : -1;
             const noteInfo = (pitchHz > 60 && pitchHz < 1200) ? hzToNote(pitchHz) : null;
- 
+
             const noteElem = document.getElementById(`step${step}-current-note`);
             const hzElem = document.getElementById(`step${step}-current-hz`);
             const circleElem = document.getElementById(`step${step}-progress-circle`);
             const statusElem = document.getElementById(`step${step}-hold-status`);
- 
-            const now = Date.now();
- 
+
             if (noteInfo) {
-                lastGoodDetectionTime = now;
                 noteElem.innerText = noteInfo.name;
                 hzElem.innerText = `${noteInfo.hz.toFixed(1)} Hz`;
- 
+
                 // Handle Hold Countdown
                 if (!holdStartTime) {
-                    holdStartTime = now;
+                    holdStartTime = Date.now();
                 }
-                const elapsed = now - holdStartTime;
+                const elapsed = Date.now() - holdStartTime;
                 const progress = Math.min(1.0, elapsed / HOLD_DURATION);
                 
                 // SVG Circle Circumference = 301
                 const dashOffset = 301 - (301 * progress);
                 circleElem.style.strokeDashoffset = dashOffset;
                 statusElem.innerText = `${Math.ceil((HOLD_DURATION - elapsed) / 1000)}s`;
- 
+
                 if (progress >= 1.0) {
                     // Successfully Captured
                     if (step === 2) {
@@ -811,33 +800,20 @@
                         document.getElementById('btn-next-step4').classList.add('bg-theme-accent', 'text-slate-950');
                     }
                     holdStartTime = null;
-                    lastGoodDetectionTime = null;
                 }
             } else {
-                // No pitch detected on this frame. Instead of resetting the hold
-                // immediately (which cut the countdown short on any tiny glitch —
-                // a breath dip, a vibrato wobble, or a single bad YIN read), we
-                // only reset once the gap has lasted longer than SILENCE_GRACE_MS.
-                const gapSinceLastGoodMs = lastGoodDetectionTime ? (now - lastGoodDetectionTime) : Infinity;
- 
-                if (!holdStartTime || gapSinceLastGoodMs > SILENCE_GRACE_MS) {
-                    noteElem.innerText = "--";
-                    hzElem.innerText = "0.0 Hz";
-                    circleElem.style.strokeDashoffset = 301;
-                    statusElem.innerText = "ลากเสียงยาว";
-                    holdStartTime = null;
-                    lastGoodDetectionTime = null;
-                }
-                // else: within the grace window — keep the ring/timer exactly where
-                // they were and wait for the voice signal to come back.
+                noteElem.innerText = "--";
+                hzElem.innerText = "0.0 Hz";
+                circleElem.style.strokeDashoffset = 301;
+                statusElem.innerText = "ลากเสียงยาว";
+                holdStartTime = null;
             }
- 
+
             requestAnimationFrame(() => runRangeTestLoop(step));
         }
- 
+
         function resetStep(step) {
             holdStartTime = null;
-            lastGoodDetectionTime = null;
             if (step === 2) {
                 lowestNoteData = null;
                 document.getElementById('step2-lowest-note').innerText = "--";
@@ -846,23 +822,23 @@
                 document.getElementById('btn-next-step3').classList.add('opacity-50', 'cursor-not-allowed', 'bg-theme-border', 'text-theme-muted');
             }
         }
- 
+
         function finishRangeTest() {
             if (!lowestNoteData || !highestNoteData) return;
             goToStep(4);
             renderResults();
         }
- 
+
         function restartRangeTest() {
             lowestNoteData = null;
             highestNoteData = null;
             goToStep(1);
         }
- 
+
         function renderResults() {
             const minHz = lowestNoteData.hz;
             const maxHz = highestNoteData.hz;
- 
+
             // Classify Voice Type
             let bestMatch = VOICE_PROFILES[1]; // Default Baritone
             let minDiff = 9999;
@@ -873,7 +849,7 @@
                     bestMatch = profile;
                 }
             });
- 
+
             // Update Text Summary
             document.getElementById('res-voice-type').innerText = bestMatch.nameTH;
             document.getElementById('res-vocal-range-text').innerText = `${lowestNoteData.name} - ${highestNoteData.name}`;
@@ -881,11 +857,11 @@
             const octaves = (Math.log2(maxHz / minHz)).toFixed(1);
             document.getElementById('res-octaves-text').innerText = `(${octaves} Octaves)`;
             document.getElementById('res-voice-desc').innerText = bestMatch.desc;
- 
+
             // Render Vocal Spectrum Comparison Bars
             const spectrumContainer = document.getElementById('vocal-spectrum-container');
             spectrumContainer.innerHTML = '';
- 
+
             VOICE_PROFILES.forEach(profile => {
                 const isUserType = profile.type === bestMatch.type;
                 const item = document.createElement('div');
@@ -901,7 +877,7 @@
                 `;
                 spectrumContainer.appendChild(item);
             });
- 
+
             // Render Recommended Artists
             const artistGrid = document.getElementById('artist-recommend-grid');
             artistGrid.innerHTML = '';
@@ -920,12 +896,12 @@
                 `;
                 artistGrid.appendChild(card);
             });
- 
+
             // Render Recommended Songs (Tunebat Style Cards)
             const songList = document.getElementById('song-recommend-list');
             songList.innerHTML = '';
-            const matchedSongs = THAI_SONGS.filter(s => s.voiceType === bestMatch.type || bestMatch.type === 'Baritone').slice(0, 4);
- 
+            const matchedSongs = THAI_SONGS.filter(s => s.voiceType === bestMatch.type || bestMatch.type === 'Baritone').slice(0, 6);
+
             matchedSongs.forEach(song => {
                 const item = document.createElement('div');
                 item.className = "bg-theme-bg border border-theme-border rounded-xl p-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-theme-accent transition-colors";
@@ -948,26 +924,26 @@
                 songList.appendChild(item);
             });
         }
- 
+
         // Synth Sound Reference Player
         function playRefPitch(freq) {
             initAudioContext();
             const osc = audioCtx.createOscillator();
             const gain = audioCtx.createGain();
- 
+
             osc.type = 'triangle';
             osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
- 
+
             gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
             gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.2);
- 
+
             osc.connect(gain);
             gain.connect(audioCtx.destination);
- 
+
             osc.start();
             osc.stop(audioCtx.currentTime + 1.2);
         }
- 
+
         // ==========================================
         // TAB 2: KEY FINDER LOGIC
         // ==========================================
@@ -980,12 +956,12 @@
                     analyserNode.fftSize = 2048;
                     const source = audioCtx.createMediaStreamSource(stream);
                     source.connect(analyserNode);
- 
+
                     isKeyFinderRunning = true;
                     btn.innerHTML = `<i class="fa-solid fa-stop"></i><span>หยุดการตรวจจับ</span>`;
                     btn.classList.replace('bg-theme-accent', 'bg-red-500/20');
                     btn.classList.replace('text-slate-950', 'text-red-400');
- 
+
                     keyFinderLoop();
                 } catch (err) {
                     alert("ไม่สามารถเปิดใช้งานไมโครโฟนได้");
@@ -997,29 +973,29 @@
                 btn.classList.replace('text-red-400', 'text-slate-950');
             }
         }
- 
+
         function keyFinderLoop() {
             if (!isKeyFinderRunning) return;
- 
+
             const buffer = new Float32Array(analyserNode.fftSize);
             analyserNode.getFloatTimeDomainData(buffer);
- 
+
             let sumSq = 0;
             for (let i = 0; i < buffer.length; i++) sumSq += buffer[i] * buffer[i];
             const rms = Math.sqrt(sumSq / buffer.length);
- 
+
             const pitchHz = (rms > 0.02) ? YINPitchDetection(buffer, audioCtx.sampleRate) : -1;
             const noteInfo = (pitchHz > 60 && pitchHz < 1200) ? hzToNote(pitchHz) : null;
- 
+
             if (noteInfo) {
                 document.getElementById('key-live-note').innerText = noteInfo.name;
                 document.getElementById('key-live-hz').innerText = `${noteInfo.hz.toFixed(1)} Hz`;
- 
+
                 // Tuner Needle (-50c to +50c mapped to 0% - 100%)
                 const needlePercent = Math.max(0, Math.min(100, ((noteInfo.cents + 50) / 100) * 100));
                 document.getElementById('key-tuner-needle').style.left = `${needlePercent}%`;
                 document.getElementById('key-cent-text').innerText = `${noteInfo.cents > 0 ? '+' : ''}${noteInfo.cents}c`;
- 
+
                 // Accumulate Note Class
                 const idx = NOTE_NAMES.indexOf(noteInfo.pitchClass);
                 if (idx !== -1) {
@@ -1029,10 +1005,10 @@
                     calculateDetectedKey();
                 }
             }
- 
+
             requestAnimationFrame(keyFinderLoop);
         }
- 
+
         function renderKeyHistogram() {
             const container = document.getElementById('key-histogram-container');
             container.innerHTML = '';
@@ -1046,7 +1022,7 @@
                 container.appendChild(col);
             });
         }
- 
+
         function updateKeyHistogram() {
             const maxVal = Math.max(1, ...keyNoteCounts);
             NOTE_NAMES.forEach((_, idx) => {
@@ -1062,7 +1038,7 @@
                 }
             });
         }
- 
+
         function calculateDetectedKey() {
             if (totalKeyNotesCaptured < 10) return;
             // Find Root Note (highest occurrence)
@@ -1070,12 +1046,12 @@
             for (let i = 1; i < 12; i++) {
                 if (keyNoteCounts[i] > keyNoteCounts[maxIdx]) maxIdx = i;
             }
- 
+
             const root = NOTE_NAMES[maxIdx];
             document.getElementById('key-detected-result').innerText = `${root} Major / ${NOTE_NAMES[(maxIdx + 9) % 12]} Minor`;
-            document.getElementById('key-confidence-text').innerText = `ประมวลผลจาก ${totalKeyNotesCaptured} ตัวอย่างโน้ต`;
+            document.getElementById('confidence-text', `ประมวลผลจาก ${totalKeyNotesCaptured} ตัวอย่างโน้ต`);
         }
- 
+
         function resetKeyFinder() {
             keyNoteCounts.fill(0);
             totalKeyNotesCaptured = 0;
@@ -1084,56 +1060,56 @@
             document.getElementById('key-live-note').innerText = "--";
             document.getElementById('key-live-hz').innerText = "0.0 Hz";
         }
- 
+
         // ==========================================
         // TAB 3: VIRTUAL PIANO LOGIC
         // ==========================================
         function renderPianoKeys() {
             const container = document.getElementById('piano-keyboard-container');
             container.innerHTML = '';
- 
+
             // Render 4 Octaves (C2 to C6)
             for (let oct = 2; oct <= 5; oct++) {
                 NOTE_NAMES.forEach((note, idx) => {
                     const fullNoteName = note + oct;
                     const isBlack = note.includes('#');
- 
+
                     const key = document.createElement('button');
                     key.dataset.note = fullNoteName;
                     key.dataset.freq = (440 * Math.pow(2, (oct - 4) + (idx - 9) / 12)).toFixed(2);
- 
+
                     if (isBlack) {
                         key.className = "piano-key-black w-8 h-28 -mx-4 z-10 rounded-b text-[10px] flex items-end justify-center pb-2 font-mono hover:bg-slate-700 transition-colors";
                     } else {
                         key.className = "piano-key-white w-12 h-44 rounded-b text-xs flex items-end justify-center pb-2 font-mono hover:bg-slate-200 transition-colors";
                     }
- 
+
                     key.innerText = fullNoteName;
                     key.onmousedown = () => playPianoNote(key.dataset.freq, key);
                     container.appendChild(key);
                 });
             }
         }
- 
+
         function playPianoNote(freq, keyElem) {
             initAudioContext();
             const waveform = document.getElementById('synth-waveform').value;
- 
+
             const osc = audioCtx.createOscillator();
             const gain = audioCtx.createGain();
- 
+
             osc.type = waveform;
             osc.frequency.setValueAtTime(parseFloat(freq), audioCtx.currentTime);
- 
+
             gain.gain.setValueAtTime(0.4, audioCtx.currentTime);
             gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.5);
- 
+
             osc.connect(gain);
             gain.connect(audioCtx.destination);
- 
+
             osc.start();
             osc.stop(audioCtx.currentTime + 1.5);
- 
+
             // Active State UI Highlight
             keyElem.classList.add('active');
             setTimeout(() => keyElem.classList.remove('active'), 300);
